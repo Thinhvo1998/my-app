@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
-
+import 'bootstrap/dist/css/bootstrap.min.css';
+import ModalContainer from './containers/ModalContainer';
+import { AppContainerProvider } from './contexts/AppContainer.context';
+import TableContainer from './containers/TableContainer';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainerProvider>
+         <div>
+            <ModalContainer/>
+            <h1>Danh Sách Accounts</h1>
+            <TableContainer/>
+         </div>
+      </AppContainerProvider>
   );
 }
 
