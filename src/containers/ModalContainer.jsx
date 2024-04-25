@@ -9,16 +9,16 @@ function ModalContainer(args) {
   return (
     <div>
       <Button color="primary" onClick={toggle}  >
-        Create New Account
+        Create New
       </Button>
       <Modal isOpen={modal} toggle={toggle} {...args}>
         <ModalHeader toggle={toggle}>Create New Account</ModalHeader>
         <ModalBody>
-          <FormContainer/>
+          <FormContainer />
         </ModalBody>
         <ModalFooter>
           <Button color="danger" onClick={toggle}>
-           Close
+            Close
           </Button>
         </ModalFooter>
       </Modal>
